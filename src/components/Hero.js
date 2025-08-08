@@ -38,7 +38,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen bg-[#F2F2F2] flex items-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen bg-gradient-to-r from-gray-900 to-black flex items-center overflow-hidden">
       
       {/* Interactive background elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -58,7 +58,7 @@ const Hero = () => {
 
         {/* Mouse follower effect: A glowing circle that follows the cursor */}
         <div
-          className="absolute w-32 h-32 bg-gradient-radial from-[#38FF62]/10 to-transparent rounded-full pointer-events-none transition-all duration-300 ease-out"
+          className="absolute w-100 h-100 bg-gradient-radial from-[#38FF62]/10 to-transparent rounded-full pointer-events-none transition-all duration-300 ease-out"
           style={{
             left: mousePosition.x - 64, // Center the circle on the cursor's X
             top: mousePosition.y - 64,  // Center the circle on the cursor's Y
@@ -68,15 +68,15 @@ const Hero = () => {
       </div>
 
       {/* Main content container with responsive padding */}
-      <div className="relative max-w-[1920px] mx-auto px-6 md:px-12 py-[95.2px] z-10">
+      <div className="relative max-w-[1920px] mx-auto px-6 md:px-12 py-[120.2px] z-10">
         
         {/* Animated label with sparkle icon - Placed at the top */}
         <div className="flex items-center space-x-4">
           <Sparkles size={20} className="text-[#38FF62] animate-pulse" />
           <div 
-            className="font-mono text-[10px] md:text-[18px] font-normal text-[#232323] uppercase tracking-[0.05em] animate-fadeInUp"
-            style={{ fontFamily: 'ui-monospace, monospace' }}
-          >
+  className="font-mono text-[12px] md:text-[18px] font-normal text-white uppercase tracking-[0.05em] animate-fadeInUp"
+  style={{ fontFamily: 'ui-monospace, monospace' }}
+>
             {/* Typing animation for professional titles */}
             <TypingAnimation texts={["MACHINE LEARNING ENGINEER", "DATA ANALYST", "AI RESEARCHER", "SPORTS ANALYST"]} />
           </div>
@@ -85,31 +85,31 @@ const Hero = () => {
         {/* Enhanced Hero Title with gradient - Placed directly below the animated label */}
         <div className="relative text-center mt-[47.6px]"> 
           <h1 
-            className="font-normal text-[#232323] uppercase leading-none animate-fadeInUp relative z-10"
+            className="font-normal text-white uppercase leading-none animate-fadeInUp relative z-10"
             style={{ 
               fontFamily: 'ui-sans-serif, system-ui, sans-serif',
-              fontSize: 'clamp(60px, 15vw, 280px)', // Responsive font size
-              animationDelay: '0.2s',
-              textShadow: '0 0 30px rgba(56, 255, 98, 0.1)' // Subtle text shadow
+              fontSize: 'clamp(40px, 10vw, 280px)', // Responsive font size
+              animationDelay: '0.5s',
+              textShadow: '0 0 10px rgba(56, 255, 99, 0.85)' // Subtle text shadow
             }}
           >
             {personal.name}
           </h1>
-          
+                      <div className="block h-4 sm:h-6 md:h-8"></div>
           {/* Glowing accent line below the name, centered relative to its parent */}
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-1 bg-gradient-to-r from-[#38FF62] via-transparent to-[#38FF62] opacity-50 animate-pulse" />
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-1 bg-gradient-to-r from-[#38FF62] via-transparent to-[#38FF62] opacity-10 animate-pulse" />
           
           {/* 3D text shadow effect for depth */}
-          <div 
-            className="absolute inset-0 font-normal text-[rgba(35,35,35,0.1)] uppercase leading-none -z-10"
+          {/* <div 
+            className="absolute inset-0 font-normal text-[rgba(246, 243, 243, 1)] uppercase leading-none -z-10"
             style={{ 
               fontFamily: 'ui-sans-serif, system-ui, sans-serif',
-              fontSize: 'clamp(60px, 15vw, 280px)',
-              transform: 'translate(4px, 4px)' // Offset for shadow effect
+              fontSize: 'clamp(40px, 10vw, 280px)',
+              transform: 'translate(100px, 100px)' // Offset for shadow effect
             }}
           >
             {personal.name}
-          </div>
+          </div> */}
         </div>
 
         {/* New grid for the content: Main content (left) and Contact Info (right) */}
@@ -122,7 +122,7 @@ const Hero = () => {
             {/* Enhanced subtitle with gradient text and typing effect */}
             <div className="relative">
               <p 
-                className="font-normal text-[#232323] leading-[1.07] max-w-4xl animate-fadeInUp text-center"
+                className="font-normal text-white leading-[1.07] max-w-4xl animate-fadeInUp text-center"
                 style={{ 
                   fontFamily: 'ui-sans-serif, system-ui, sans-serif',
                   fontSize: 'clamp(32px, 6vw, 84px)',
@@ -134,7 +134,7 @@ const Hero = () => {
                   <span className="bg-gradient-to-r from-[#38FF62] to-[#2AE052] bg-clip-text text-transparent">
                     Data
                   </span>
-                  <span className="absolute inset-0 bg-gradient-to-r from-[#38FF62] to-[#2AE052] opacity-20 blur-sm">
+                  <span className="absolute inset-0 bg-gradient-to-r from-[#38FF62] to-[#2AE052] opacity-10  blur-md">
                     Data
                   </span>
                 </span>
@@ -144,7 +144,7 @@ const Hero = () => {
 
             {/* Enhanced description with a subtle ping animation */}
             <p 
-              className="font-normal text-[#232323] leading-[1.33] max-w-3xl animate-fadeInUp relative text-center"
+              className="font-normal text-white leading-[1.33] max-w-3xl animate-fadeInUp relative text-center"
               style={{ 
                 fontFamily: 'ui-sans-serif, system-ui, sans-serif',
                 fontSize: 'clamp(14px, 1.8vw, 22px)',
@@ -160,7 +160,7 @@ const Hero = () => {
               {/* View Projects Button */}
               <button
                 onClick={() => scrollToSection('projects')}
-                className="group relative overflow-hidden bg-[#38FF62] border-none px-8 py-4 font-mono text-[12px] font-normal text-[#232323] uppercase cursor-pointer transition-all duration-300 min-h-[52px] flex items-center justify-center tracking-[0.05em] hover:scale-[1.05] hover:shadow-[0_10px_30px_rgba(56,255,98,0.4)]"
+                className="group relative overflow-hidden bg-[#38FF62] border-none px-8 py-4 font-mono text-[15px] font-normal text-[#232323] uppercase cursor-pointer transition-all duration-300 min-h-[52px] flex items-center justify-center tracking-[0.05em] hover:scale-[1.05] hover:shadow-[0_10px_30px_rgba(56,255,98,0.4)]"
                 style={{ fontFamily: 'ui-monospace, monospace' }}
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-[#2AE052] to-[#38FF62] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
@@ -172,7 +172,7 @@ const Hero = () => {
               {/* Get In Touch Button */}
               <button
                 onClick={() => scrollToSection('contact')}
-                className="group relative overflow-hidden bg-transparent border-2 border-[#232323] px-8 py-4 font-mono text-[12px] font-normal text-[#232323] uppercase cursor-pointer transition-all duration-300 min-h-[52px] flex items-center justify-center tracking-[0.05em] hover:border-[#38FF62] hover:text-[#38FF62] hover:scale-[1.05] hover:shadow-[0_10px_30px_rgba(56,255,98,0.2)]"
+                className="group relative overflow-hidden bg-transparent border-2 border-white px-8 py-4 font-mono text-[15px] font-normal text-white uppercase cursor-pointer transition-all duration-300 min-h-[52px] flex items-center justify-center tracking-[0.05em] hover:border-[#38FF62] hover:text-[#38FF62] hover:scale-[1.05] hover:shadow-[0_10px_30px_rgba(56,255,98,0.2)]"
                 style={{ fontFamily: 'ui-monospace, monospace' }}
               >
                 <Mail size={16} className="mr-2 group-hover:scale-110 transition-transform duration-300" />
@@ -181,11 +181,11 @@ const Hero = () => {
 
               {/* Download Resume Button */}
               <button
-                className="group relative overflow-hidden bg-transparent border border-[rgba(35,35,35,0.3)] px-6 py-3 font-mono text-[10px] font-normal text-[rgba(35,35,35,0.7)] uppercase cursor-pointer transition-all duration-300 min-h-[44px] flex items-center justify-center tracking-[0.05em] hover:border-[#38FF62] hover:text-[#38FF62] hover:bg-[rgba(56,255,98,0.05)]"
+                className="group relative overflow-hidden bg-transparent border-2 border-white px-6 py-3 font-mono text-[15px] font-normal text-white uppercase cursor-pointer transition-all duration-300 min-h-[44px] flex items-center justify-center tracking-[0.05em] hover:border-[#38FF62] hover:text-[#38FF62] hover:text-[#38FF62] hover:scale-[1.05] hover:shadow-[0_10px_30px_rgba(56,255,98,0.2)]"
                 style={{ fontFamily: 'ui-monospace, monospace' }}
               >
                 <Download size={14} className="mr-2 group-hover:scale-110 transition-transform duration-300" />
-                <span>DOWNLOAD CV</span>
+                <span>DOWNLOAD RESUME</span>
               </button>
             </div>
           </div>
@@ -195,18 +195,19 @@ const Hero = () => {
             
             {/* Enhanced Contact Card with glowing border on hover */}
             <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-[#38FF62] to-[#2AE052] rounded-lg blur opacity-0 group-hover:opacity-25 transition duration-1000"></div>
-              
-              <div className="relative bg-white border border-[rgba(35,35,35,0.1)] p-6 transition-all duration-500 hover:translate-y-[-4px] hover:shadow-[0_20px_40px_rgba(35,35,35,0.15)]">
+              <div className="absolute -inset-1 bg-gradient-to-r from-[#38FF62] to-[#2AE052] rounded-lg blur-xl opacity-30 group-hover:opacity-50 transition duration-1500"></div>
+
+<div className="relative bg-black border border-[rgba(65, 61, 61, 0.1)] p-6 transition-all duration-500 hover:translate-y-[-4px] hover:shadow-[0_20px_40px_rgba(35,35,35,0.15)]">
+  {/* Your card content goes here */}
                 
                 <div className="flex items-center justify-between mb-6">
                   <h3 
-                    className="font-mono text-[14px] font-normal text-[#232323] uppercase tracking-[0.05em]"
+                    className="font-mono text-[20px] font-normal text-white uppercase tracking-[0.05em]"
                     style={{ fontFamily: 'ui-monospace, monospace' }}
                   >
                     CONTACT INFO
                   </h3>
-                  <div className="w-2 h-2 bg-[#38FF62] rounded-full animate-pulse" />
+                  <div className="w-2 h-2 bg-[#38FF62] rounded-full opacity-10 animate-pulse" />
                 </div>
                 
                 <div className="space-y-4">
@@ -226,23 +227,23 @@ const Hero = () => {
                     { 
                       icon: MapPin, 
                       text: personal.location, 
-                      href: null,
+                      href: 'https://www.google.com/maps/place/Noida,+Uttar+Pradesh/@28.5221024,77.2370147,11z/data=!3m1!4b1!4m6!3m5!1s0x390ce5a43173357b:0x37ffce30c87cc03f!8m2!3d28.5355161!4d77.3910265!16zL20vMDN3dHow?entry=ttu&g_ep=EgoyMDI1MDgwNS4wIKXMDSoASAFQAw%3D%3D',
                       color: '#FFA726'
                     },
                     { 
                       icon: Linkedin, 
                       text: 'LinkedIn Profile', 
-                      href: `https://${personal.linkedin}`,
+                      href: `${personal.linkedin}`,
                       color: '#45B7D1'
                     },
                     { 
                       icon: Github, 
                       text: 'GitHub Profile', 
-                      href: `https://${personal.github}`,
-                      color: '#AB47BC'
+                      href: `${personal.github}`,
+                      color: '#c71fe4ff'
                     }
                   ].map(({ icon: Icon, text, href, color }, index) => (
-                    <div key={index} className="group/item flex items-center space-x-3 p-2 hover:bg-[rgba(56,255,98,0.05)] transition-all duration-300 cursor-pointer">
+                    <div key={index} className="group/item flex items-center space-x-3 p-2 hover:bg-[rgba(255, 255, 255, 1)] transition-all duration-300 cursor-pointer">
                       <div 
                         className="p-2 transition-all duration-300 group-hover/item:scale-110"
                         style={{ backgroundColor: `${color}20` }}
@@ -254,7 +255,7 @@ const Hero = () => {
                           href={href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="font-normal text-[#232323] hover:text-[#38FF62] transition-colors duration-300 flex-1"
+                          className="font-normal text-white hover:text-[#38FF62] transition-colors duration-300 flex-1  focus:outline-none"
                           style={{ 
                             fontFamily: 'ui-sans-serif, system-ui, sans-serif',
                             fontSize: 'clamp(14px, 1.8vw, 16px)'
@@ -278,11 +279,11 @@ const Hero = () => {
                 </div>
 
                 {/* Status indicator for availability */}
-                <div className="mt-6 pt-4 border-t border-[rgba(35,35,35,0.1)]">
+                <div className="mt-6 pt-4 border-t border-[#38FF62]">
                   <div className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-[#38FF62] rounded-full animate-pulse" />
                     <span 
-                      className="font-mono text-[10px] font-normal text-[#232323] uppercase tracking-[0.05em]"
+                      className="font-mono text-[12px] font-normal text-white uppercase tracking-[0.10em]"
                       style={{ fontFamily: 'ui-monospace, monospace' }}
                     >
                       AVAILABLE FOR OPPORTUNITIES
