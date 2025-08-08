@@ -6,8 +6,8 @@ export const portfolioData = {
     phone: "+91 9997664996",
     email: "dakshg508@gmail.com",
     location: "Noida, India",
-    linkedin: "linkedin.com/in/DakshGupta",
-    github: "github.com/DakshGupta"
+    linkedin: "https://www.linkedin.com/in/daksh-gupta-669391271/",
+    github: "https://github.com/DaxGupta"
   },
   
   objective: "Graduate in statistics, machine learning, and data analysis seeking a junior data analyst or AI/ML role. Skilled in Python, SQL, Pandas, NumPy, data visualization, and machine learning, with experience translating raw data into actionable insights.",
